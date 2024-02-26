@@ -1,0 +1,42 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFC0CB;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: rgba(255, 192, 203, 0.6);
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+footer {
+    background-color: rgba(255, 192, 203, 0.8);
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.confetti {
+    position: fixed;
+    width: 15px; /* Increased width */
+    height: 20px; /* Increased height for oval shape */
+    background-color: pink;
+    opacity: 0.6;
+    z-index: 9999;
+    border-radius: 10px; /* Rounded edges for an oval shape */
+    top: -10%; /* Start above the viewport */
+    animation: fall linear 1 forwards; /* Ensure it runs forwards to the end */
+}
+
+@keyframes fall {
+    to { top: 110%; } /* End below the viewport */
+}
