@@ -3,45 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Bday Baby</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Guess wut</title>
 </head>
 <body>
-    <header>
-        <h1> Happy Birthday Tiffany!!!</h1>
-    </header>
-
-    <section>
-        <p>I love you so much and hope you have a wonderful day!!</p>
-    </section>
-
-    <footer>
-        <p>Made by kitten boob</p>
-    </footer>
-    <script>
-       function createConfettiPiece() {
-    const confetti = document.createElement('div');
-    confetti.className = 'confetti';
-    confetti.style.left = Math.random() * 100 + 'vw';
-    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    confetti.style.opacity = Math.random();
-    confetti.style.transform = `scale(${Math.random()})`;
-
-    // More consistent animation duration
-    confetti.style.animationDuration = (Math.random() * 2 + 1) + 's'; // Between 1 to 3 seconds
-    confetti.style.animationDelay = Math.random() + 's'; // Up to 1 second delay
-    
-    document.body.appendChild(confetti);
-
-    setTimeout(() => {
-        confetti.remove();
-    }, 4000); // Adjusted to 4 seconds
-}
-        
-    function startConfetti() {
-        setInterval(createConfettiPiece, 100);
-    }
-    startConfetti();
-    </script>
+    <div class="button-container">
+        <a href="yay.html" class="guess-button">Guess what</a>
+    </div>
 </body>
 </html>

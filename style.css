@@ -1,20 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+* {
+    cursor: url('heart-cursor.png'), auto;
+}
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #FFC0CB;
+    background: linear-gradient(to right, #FFC0CB, #FFD1DC);
     color: #333333;
     margin: 0;
     padding: 0;
     text-align: center;
+    
 }
 
 header {
-    background-color: rgba(255, 192, 203, 0.6);
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    background-color: #FFC0CB; /* Light pastel pink */
+    color: white;
+    text-align: center;
     padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds depth */
+    font-family: 'Arial', sans-serif;
 }
 
 h1 {
+    font-size: 2.5rem; /* Large, readable text */
     margin: 0;
-    font-size: 2.5em;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
 footer {
@@ -23,6 +36,18 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 1.5rem;
+    color: #333; /* Dark text for readability */
 }
 
 .confetti {
@@ -39,4 +64,31 @@ footer {
 
 @keyframes fall {
     to { top: 110%; } /* End below the viewport */
+}
+
+.balloon {
+    position: fixed;
+    bottom: -100px; /* Start off screen */
+    width: 50px;
+    height: 70px;
+    background-color: #FFC0CB; /* Light pink */
+    border-radius: 50%;
+    opacity: 0.7;
+    z-index: -1; /* Behind content */
+    animation: float ease-in-out infinite;
+}
+
+.balloon:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    border-width: 20px 10px 0 10px;
+    border-style: solid;
+    border-color: #FFC0CB transparent transparent transparent;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
