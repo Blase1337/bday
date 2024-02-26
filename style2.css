@@ -1,0 +1,25 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.guess-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E91E63; /* Example: bright pink */
+    color: white;
+    text-decoration: none; /* Removes underline from link */
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.guess-button:hover {
+    background-color: #C2185B; /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

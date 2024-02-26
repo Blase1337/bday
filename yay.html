@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Bday Baby</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="balloon" style="left:10%;animation-duration:5s;"></div>
+    <div class="balloon" style="left:20%;animation-duration:7s;"></div>
+    <div class="balloon" style="left:35%;animation-duration:6s;"></div>
+    <header>
+        <h1> Happy Birthday Tiffany!!!</h1>
+    </header>
+
+    <section>
+        <h2>You are turning 21!!!!!</h2>
+    </section>
+    <section>
+        <p> You are doing amazing look how far you've got in your life and I couldn't be more proud. <br>I hope your day is just amazing as you deserve it to be I love you so  so much!!!</p>
+    </section>
+
+    <footer>
+        <h3>Made by kitten boob</h3>
+    </footer>
+    <script>
+       function createConfettiPiece() {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.left = Math.random() * 100 + 'vw';
+    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    confetti.style.opacity = Math.random();
+    confetti.style.transform = `scale(${Math.random()})`;
+
+    // More consistent animation duration
+    confetti.style.animationDuration = (Math.random() * 2 + 1) + 's'; // Between 1 to 3 seconds
+    confetti.style.animationDelay = Math.random() + 's'; // Up to 1 second delay
+    
+    document.body.appendChild(confetti);
+
+    setTimeout(() => {
+        confetti.remove();
+    }, 4000); // Adjusted to 4 seconds
+}
+        
+    function startConfetti() {
+        setInterval(createConfettiPiece, 100);
+    }
+    startConfetti();
+    </script>
+</body>
+</html>
