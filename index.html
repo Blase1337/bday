@@ -8,7 +8,37 @@
 </head>
 <body>
     <div class="button-container">
-        <a href="yay.html" class="guess-button">CLICK ME!!</a>
+        <a class="guess-button" id="moveButton">CLICK ME!!</a>
     </div>
+    <script>
+        var clickCount = 0;
+
+document.getElementById("moveButton").addEventListener("click", function() {
+    clickCount++;
+
+
+    if (clickCount <= 3) {
+        // Move the button
+        var topPosition = Math.random() * (window.innerHeight - this.offsetHeight);
+        var leftPosition = Math.random() * (window.innerWidth - this.offsetWidth);
+
+        this.style.top = topPosition + 'px';
+        this.style.left = leftPosition + 'px';
+        switch(clickCount){
+        case 1:
+            this.textContent = 'Over here!'
+            break;
+        case 2:
+            this.textContent = 'No, over here!'
+            break;
+        case 3:
+            this.textContent = 'Finally!'
+            break;
+        }
+    } else {
+        window.location.href = 'yay.html';
+    }
+});
+    </script>
 </body>
 </html>

@@ -10,16 +10,18 @@ body {
     background-attachment: fixed; /* Optional: keeps the image fixed during scroll */
 }
 .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: 100%; /* Full width of the viewport */
     height: 100vh; /* Full height of the viewport */
+    display: flex; /* Using Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 .guess-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #E91E63; /* Example: bright pink */
+    background-color: #fad0c4; /* Example: bright pink */
     color: white;
     text-decoration: none; /* Removes underline from link */
     border-radius: 5px;
@@ -28,9 +30,15 @@ body {
     text-align: center;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
 }
 
 .guess-button:hover {
+    background-image: linear-gradient(to right, #ff69b4, #ff1493, #ff69b4, #ff1493, #ff69b4); /* Gradient on hover */
+    color: white;
     background-color: #C2185B; /* Darker shade on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+#moveButton {
+    position: absolute;
 }
