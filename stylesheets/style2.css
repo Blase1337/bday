@@ -2,6 +2,13 @@
 * {
     cursor: url('heart-cursor.png'), auto;
 }
+body {
+    background-image: url('../images/background-img.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Optional: keeps the image fixed during scroll */
+}
 .button-container {
     display: flex;
     justify-content: center;
